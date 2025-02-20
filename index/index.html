@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -17,20 +18,17 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            /* Adiciona a imagem de fundo */
-            background-image: url("old.jpeg"); /* Certifique-se que o caminho está correto */
-            background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
-            background-repeat: no-repeat; /* Evita repetição da imagem */
-            color: #333; /* Cor do texto para melhor contraste com o fundo */
+            /* Imagem de fundo */
+            background-image: url("old.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            /* Cor do texto ajustada para melhor contraste */
-            color: white; /* Ou outra cor que funcione bem com seu fundo */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no texto para legibilidade */
-
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .linkedin-button {
@@ -51,12 +49,23 @@
         .linkedin-image {
             width: 200px;
             margin-bottom: 20px;
+            animation: moveImage 4s linear infinite alternate;
+        }
+
+        @keyframes moveImage {
+            from {
+                transform: translateX(-10px);
+            }
+
+            to {
+                transform: translateX(10px);
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Bem-vindo à minha página de boas-vindas!</h1>
+    <h1>Bem-vindos à minha página!</h1>
     <img class="linkedin-image" src="linkedin.png" alt="Logo do LinkedIn">
     <a class="linkedin-button" href="https://www.linkedin.com/in/jhon-wilame/" target="_blank">Meu LinkedIn</a>
 </body>
