@@ -1,13 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-    <title>Bem-vindo!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-vindas!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .linkedin-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0077b5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .linkedin-button:hover {
+            background-color: #005fa3;
+        }
+
+        .linkedin-image {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Bem-vindo à minha página!</h1>
-    <a href="https://www.linkedin.com/in/seu_perfil_linkedin" target="_blank">
-        <img src="https://logodownload.org/wp-content/uploads/2016/11/linkedin-logo-1.png" alt="LinkedIn Logo" width="100">
-        <p>Meu LinkedIn</p>
-    </a>
+    <h1>Bem-vindo à minha página de boas-vindas!</h1>
+    <img class="linkedin-image" src="linkedin.png" alt="Logo do LinkedIn">
+    <a class="linkedin-button" href="https://www.linkedin.com/in/jhon-wilame/" target="_blank">Meu LinkedIn</a>
 </body>
+
 </html>

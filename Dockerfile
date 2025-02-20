@@ -1,7 +1,7 @@
 FROM nginx:latest
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html /usr/share/nginx/html/
+COPY index/ /usr/share/nginx/html/
 
 # Cria o diretório de logs
 RUN mkdir -p /var/log/nginx
