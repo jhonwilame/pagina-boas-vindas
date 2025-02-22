@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name localhost;
+
+    # Log separado para a página de boas-vindas
+    access_log /var/log/nginx/boasvindas.log;
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html;
+    }
+}

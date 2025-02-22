@@ -1,12 +1,13 @@
 FROM nginx:latest
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index/ /usr/share/nginx/html/
+# Copia o seu arquivo nginx.conf para o local correto
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Cria o diretório de logs
+# Copia o diretório html para dentro do contêiner
+COPY index/ /usr/share/nginx/html
+
+# Cria os diretórios de log (se necessário)
 RUN mkdir -p /var/log/nginx
 
-# Define as permissões para o diretório de logs
-RUN chmod 755 /var/log/nginx
-
-EXPOSE 80
+# Define as permissões para os arquivos de log (se necessário)
+RUN chmod 644 /var/log/nginx/*.log
