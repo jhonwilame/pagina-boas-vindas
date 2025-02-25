@@ -7,6 +7,7 @@ IMAGE_NAME="repo-teste"  # Use o mesmo nome que você deu na hora do build
 
 docker build -t $IMAGE_NAME .
 docker tag $IMAGE_NAME:latest "$ECR_REGISTRY/$IMAGE_NAME:latest"
+
 docker push "$ECR_REGISTRY/$IMAGE_NAME:latest"
 
 echo "Build e push concluídos."
